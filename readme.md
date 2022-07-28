@@ -9,4 +9,4 @@ Based on official [Vite React Typescript template](https://github.com/vitejs/vit
 - `src/` path alias for absolute import
 - Advanced [`.gitignore`](./.gitignore)
 
-[shields-fsd-image]: https://img.shields.io/badge/Feature--Sliced-Design-F92672?logoWidth=32&style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADJSURBVHgB7dfhCYMwEAXgd8UBHKHdoCOkI3SEblInaUfoCO0GbtCMkA3i5YeQH2I8OHIB/UAEeaiYx0koMhg6wVjHh8eeEVfgD0O0+xKaS0vwEuQHIvLQFGUclDUxiG6C/AhlqQNPGDrmQOrAA4Y61BV4jnzyC7U74PkFLvmFJjowoJ6AhRf4YruRP2FYC/CK9ny6zg/k/PrwijIOBSmT5Ys/uiY68Bbkw4aMz+75Q/OijIOyY2NiTroxuRcHi1BagrMg30OZeQknPcrQWNgGlSgAAAAASUVORK5CYII=
+[shields-fsd-image]: https://img.shields.io/badge/Feature--Sliced-Design-FFFFFF?logoWidth=24&style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTMuNS41aDE3djJoLTE3di0yWm0wIDNoMTd2MmgtMTd2LTJabTAgM2g4djJoLTh2LTJabTAgM2gxN3YyaC0xN3YtMlptMCAzaDE3djJoLTE3di0yWm0wIDNoOHYyaC04di0yWm0wIDNoOHYyaC04di0yWm0wIDNoOHYyaC04di0yWiIvPjwvc3ZnPg==
