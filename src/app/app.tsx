@@ -1,9 +1,10 @@
-import classnames, { height, width } from '@/shared/config/classnames/tailwind'
-import { RouterProvider } from 'atomic-router-react'
-import { router } from './config/routing/init'
-import { RoutesView } from './config/routing/RoutesView'
+import { RouterProvider } from 'atomic-router-react';
 
-const appClass = classnames(width('w-screen'), height('h-screen'))
+import classnames, { height, width } from '@/shared/config/classnames/tailwind';
+
+import { router, RoutesView } from './config/routing/init';
+
+const appClass = classnames(width('w-screen'), height('h-screen'));
 
 export const App = () => {
   return (
@@ -12,5 +13,5 @@ export const App = () => {
         <RoutesView />
       </RouterProvider>
     </div>
-  )
-}
+  );
+};

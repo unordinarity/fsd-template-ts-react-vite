@@ -1,13 +1,18 @@
-import { routes } from '@/shared/config/routing'
-import { createHistoryRouter, redirect } from 'atomic-router'
-import { createBrowserHistory } from 'history'
-import { routesMap } from './routesMap'
+import { createHistoryRouter, redirect } from 'atomic-router';
+import { createRoutesView } from 'atomic-router-react';
+import { createBrowserHistory } from 'history';
 
-export const router = createHistoryRouter({ routes: routesMap })
+import { routes } from '@/shared/config/routing';
+
+import { routesMap } from './routesMap';
+
+export const RoutesView = createRoutesView({ routes: routesMap });
+
+export const router = createHistoryRouter({ routes: routesMap });
 
 redirect({
-  clock: [router.routeNotFound, routes.root.opened, routes.root.updated],
+  clock: [router.routeNotFound, routes.root.opened],
   route: routes.postsList,
-})
+});
 
-router.setHistory(createBrowserHistory())
+router.setHistory(createBrowserHistory());
