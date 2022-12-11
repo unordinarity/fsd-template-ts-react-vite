@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Post 1",
+      "description": "Content 1",
+      "author": {
+        "id": 1,
+        "name": "Author 1"
+      },
+      "content": "Content 1"
+    },
+    {
+      "id": 2,
+      "title": "Post 2",
+      "description": "Content 2",
+      "author": {
+        "id": 2,
+        "name": "Author 2"
+      },
+      "content": "Content 2"
+    }
+  ]
+}

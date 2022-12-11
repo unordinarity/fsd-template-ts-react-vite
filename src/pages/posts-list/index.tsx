@@ -7,6 +7,8 @@ import classnames, {
   padding,
 } from '@/shared/config/classnames/tailwind';
 
+import './model';
+
 const wrapper = classnames(
   display('flex'),
   justifyContent('justify-center'),
@@ -15,7 +17,7 @@ const wrapper = classnames(
 
 const title = classnames(padding('p-10'), fontSize('text-6xl'), fontWeight('font-bold'));
 
-const PostsList = () => {
+export default function PostsList() {
   return (
     <div className={wrapper}>
       <p className={title}>All Posts</p>
@@ -23,6 +25,4 @@ const PostsList = () => {
       <div></div>
     </div>
   );
-};
-
-export default PostsList;
+}

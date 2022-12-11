@@ -1,14 +1,14 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react';
+import path from 'node:path';
+import { packageDirectorySync } from 'pkg-dir';
+import { defineConfig } from 'vite';
+import checker from 'vite-plugin-checker';
 
-import path from 'node:path'
-import { packageDirectorySync } from 'pkg-dir'
-
-const packageRoot = packageDirectorySync()
+const packageRoot = packageDirectorySync();
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), checker({ typescript: true })],
   resolve: {
     alias: {
       '@/app': path.resolve(packageRoot, './src/app'),
@@ -19,4 +19,4 @@ export default defineConfig({
       '@/shared': path.resolve(packageRoot, './src/shared/'),
     },
   },
-})
+});
