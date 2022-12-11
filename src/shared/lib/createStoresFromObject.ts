@@ -6,6 +6,21 @@ export function createStoresFromObject<T extends object>(initialState: T) {
     {} as { [key in keyof T]: Store<T[key]> },
   );
 
+  const state1 = Object.entries(initialState).reduce(
+    (acc, [key, value]) => ({ ...acc, [key]: createStore(value) }),
+    {} as { [key in keyof T]: Store<T[key]> },
+  );
+
+  const stae = Object.entries(initialState).reduce(
+    (acc, [key, value]) => ({ ...acc, [key]: createStore(value) }),
+    {} as { [key in keyof T]: Store<T[key]> },
+  );
+
+  const stadte = Object.entries(initialState).reduce(
+    (acc, [key, value]) => ({ ...acc, [key]: createStore(value) }),
+    {} as { [key in keyof T]: Store<T[key]> },
+  );
+
   // const setState = Object.entries(initialState).reduce(
   //   (acc, [key, value]) => ({
   //     ...acc,
