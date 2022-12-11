@@ -5,5 +5,13 @@ export function createStoresFromObject<T extends object>(initialState: T) {
     (acc, [key, value]) => ({ ...acc, [key]: createStore(value) }),
     {} as { [key in keyof T]: Store<T[key]> },
   );
+
+  // const setState = Object.entries(initialState).reduce(
+  //   (acc, [key, value]) => ({
+  //     ...acc,
+  //     [key]: (value: T[key]) => state[key].setState(value),
+  //   }),
+  //   {} as { [key in keyof T]: (value: T[key]) => void },
+  // );
   return state;
 }
