@@ -1,3 +1,5 @@
+import { useUnit } from 'effector-react';
+
 import classnames, {
   alignItems,
   display,
@@ -8,6 +10,7 @@ import classnames, {
 } from '@/shared/config/classnames/tailwind';
 
 import './model';
+import { $isPostsListLoading, $postsList } from './model';
 
 const wrapper = classnames(
   display('flex'),
@@ -18,11 +21,24 @@ const wrapper = classnames(
 const title = classnames(padding('p-10'), fontSize('text-6xl'), fontWeight('font-bold'));
 
 export default function PostsList() {
+  const [isLoading, postsList] = useUnit([$isPostsListLoading, $postsList]);
+
   return (
     <div className={wrapper}>
       <p className={title}>All Posts</p>
 
-      <div></div>
+      {isLoading ? (
+        <h1>Loading...</h1>
+      ) : (
+        <div>
+          {postsList.map((post) => (
+            <div key={post.id}>
+              <h1>{post.title}</h1>
+              <p>{post.description}</p>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

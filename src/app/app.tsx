@@ -1,12 +1,15 @@
-import { RouterProvider } from 'atomic-router-react';
+import { createRoutesView, RouterProvider } from 'atomic-router-react';
 
 import classnames, { height, width } from '@/shared/config/classnames/tailwind';
 
-import { router, RoutesView } from './config/routing/init';
+import { router } from './config/routing/init';
+import { viewRoutes } from './config/routing/routesMap';
 
 const appClass = classnames(width('w-screen'), height('h-screen'));
 
-export const App = () => {
+const RoutesView = createRoutesView({ routes: viewRoutes });
+
+export function App() {
   return (
     <div className={appClass}>
       <RouterProvider router={router}>
@@ -14,4 +17,4 @@ export const App = () => {
       </RouterProvider>
     </div>
   );
-};
+}

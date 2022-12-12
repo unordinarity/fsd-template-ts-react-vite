@@ -3,6 +3,7 @@
   "type": "module",
   "scripts": {
     "dev": "yarn vite",
+    "db": "json-server --watch db/posts_db.json -p 8080",
     "generate-css-types": "tailwindcss-classnames -o src/shared/config/classnames/tailwind.ts && prettier --write src/shared/config/classnames/tailwind.ts",
     "build": "tsc && vite build",
     "preview": "vite preview"

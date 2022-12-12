@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export const ApiInstance = axios.create({
-  baseURL: process.env.API_URL,
+  baseURL: import.meta.env.API_URL,
 });
