@@ -9,8 +9,8 @@ import classnames, {
   padding,
 } from '@/shared/config/classnames/tailwind';
 
-import './model';
 import { $isPostsListLoading, $postsList } from './model';
+import './model/init';
 
 const wrapper = classnames(
   display('flex'),

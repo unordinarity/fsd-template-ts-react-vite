@@ -1,4 +1,5 @@
 import { createRoutesView, RouterProvider } from 'atomic-router-react';
+import { Suspense } from 'react';
 
 import classnames, { height, width } from '@/shared/config/classnames/tailwind';
 
@@ -12,9 +13,11 @@ const RoutesView = createRoutesView({ routes: viewRoutes });
 export function App() {
   return (
     <div className={appClass}>
-      <RouterProvider router={router}>
-        <RoutesView />
-      </RouterProvider>
+      <Suspense fallback={<div>Loading...</div>}>
+        <RouterProvider router={router}>
+          <RoutesView />
+        </RouterProvider>
+      </Suspense>
     </div>
   );
 }

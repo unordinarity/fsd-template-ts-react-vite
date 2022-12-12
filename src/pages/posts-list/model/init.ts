@@ -1,13 +1,9 @@
 import { sample } from 'effector';
-import { debug } from 'patronum';
 
-import { routes } from '@/shared/config/routing';
-
-import { $postsList, getPostsListFx } from '.';
+import { $postsList, getPostsListFx, loadPostsListViewFx } from '.';
 
 sample({
-  clock: routes.postsList.opened,
-  fn: () => {},
+  clock: loadPostsListViewFx.done,
   target: getPostsListFx,
 });
 
@@ -15,5 +11,3 @@ sample({
   clock: getPostsListFx.doneData,
   target: $postsList,
 });
-
-debug(routes.postsList.opened);
