@@ -1,9 +1,11 @@
 import { sample } from 'effector';
 
-import { $postsList, getPostsListFx, loadPostsListViewFx } from '.';
+import { routes } from '@/shared/config/routing';
+
+import { $postsList, getPostsListFx, modelLoaded } from '.';
 
 sample({
-  clock: loadPostsListViewFx.done,
+  clock: [modelLoaded, routes.postsList.opened],
   target: getPostsListFx,
 });
 
@@ -11,3 +13,5 @@ sample({
   clock: getPostsListFx.doneData,
   target: $postsList,
 });
+
+modelLoaded();

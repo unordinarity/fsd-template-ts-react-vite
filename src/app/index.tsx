@@ -1,3 +1,4 @@
+import { createInspector } from 'effector-inspector';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 
@@ -11,3 +12,5 @@ reactRoot.render(
     <App />
   </React.StrictMode>,
 );
+
+createInspector();

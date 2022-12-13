@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Post 1",
-      "description": "Content 1",
+      "description": "Description 1",
       "author": {
         "id": 1,
         "name": "Author 1"
@@ -13,7 +13,7 @@
     {
       "id": 2,
       "title": "Post 2",
-      "description": "Content 2",
+      "description": "Description 2",
       "author": {
         "id": 2,
         "name": "Author 2"

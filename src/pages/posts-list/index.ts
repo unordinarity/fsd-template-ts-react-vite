@@ -1,5 +1,1 @@
-import { lazy } from 'react';
-
-import { loadPostsListViewFx } from './model';
-
-export const PostsList = lazy(loadPostsListViewFx);
+export { PostsList as default } from './ui/posts-list-page';
