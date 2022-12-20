@@ -1,59 +1,48 @@
-import classnames, {
-  alignItems,
-  borderColor,
-  borderRadius,
-  borderWidth,
-  cursor,
-  display,
-  flexDirection,
-  fontSize,
-  fontWeight,
-  gap,
-  justifyContent,
-  padding,
-  width,
-} from '@/shared/config/classnames/tailwind';
+import { styled } from '@/shared/config/stitches.config';
 
-export const wrapper = classnames(
-  display('flex'),
-  justifyContent('justify-center'),
-  alignItems('items-center'),
-  flexDirection('flex-col'),
-  gap('gap-20'),
-);
+export const Wrapper = styled('div', {
+  d: 'flex',
+  jc: 'center',
+  ai: 'center',
+  fd: 'column',
+  gap: '20',
+});
 
-export const title = classnames(
-  padding('p-10'),
-  fontSize('text-6xl'),
-  fontWeight('font-bold'),
-);
+export const Title = styled('h1', {
+  p: '40px',
+  fs: '4rem',
+  fw: 'bold',
+});
 
-export const postsWrapper = classnames(
-  width('w-full'),
-  display('flex'),
-  justifyContent('justify-center'),
-  alignItems('items-center'),
-  flexDirection('flex-col'),
-  gap('gap-10'),
-);
+export const PostsWrapper = styled('div', {
+  w: '100%',
+  d: 'flex',
+  jc: 'center',
+  ai: 'center',
+  fd: 'column',
+  gap: '30px',
+});
 
-export const post = classnames(
-  width('w-1/3'),
-  padding('p-6'),
-  display('flex'),
-  flexDirection('flex-col'),
-  gap('gap-2'),
-  fontSize('text-4xl'),
-  fontWeight('font-medium'),
-  borderRadius('rounded-xl'),
-  borderColor('border-gray-500'),
-  borderColor('hover:border-blue-500'),
-  borderWidth('border-2'),
-  borderWidth('hover:border-4'),
-  cursor('hover:cursor-pointer'),
-);
+export const Post = styled('div', {
+  w: '30%',
+  p: '30px',
+  d: 'flex',
+  jc: 'flex-start',
+  ai: 'center',
+  fd: 'column',
+  gap: '10px',
+  fs: '3rem',
+  fw: '500',
+  border: '3px solid #808080',
+  br: '10px',
 
-export const description = classnames(
-  fontSize('text-2xl'),
-  fontWeight('font-normal'),
-);
+  '&:hover': {
+    border: '4px solid #0060ff',
+    cursor: 'pointer',
+  },
+});
+
+export const Description = styled('p', {
+  fs: '2rem',
+  fw: 'normal',
+});
