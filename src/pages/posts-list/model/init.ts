@@ -17,7 +17,7 @@ sample({
 
 redirect({
   clock: postClicked,
-  params: ({ postId }) => ({ postId }),
+  params: ({ id: postId }) => ({ postId }),
   route: routes.post,
 });
 

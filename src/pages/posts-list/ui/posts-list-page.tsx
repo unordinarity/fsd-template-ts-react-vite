@@ -8,11 +8,11 @@ import '../model/init';
 
 type PostProps = {
   post: Post;
-  postClicked: (payload: { postId: string }) => void;
+  postClicked: (post: Post) => void;
 };
 
 const PostItem = ({ post, postClicked }: PostProps) => (
-  <Styles.Post onClick={() => postClicked({ postId: post.id })}>
+  <Styles.Post onClick={() => postClicked(post)}>
     <h1>{post.title}</h1>
     <Styles.Description>{post.description}</Styles.Description>
   </Styles.Post>
@@ -30,7 +30,11 @@ const PostsField = variant({
   source: $postsLoadingStatus,
   cases: {
     pending: () => <h1>Loading...</h1>,
-    done: Posts,
+    done: () => (
+      <Styles.PostsWrapper isMobile>
+        <Posts />
+      </Styles.PostsWrapper>
+    ),
     fail: () => <h1>Something went wrong</h1>,
   },
 });

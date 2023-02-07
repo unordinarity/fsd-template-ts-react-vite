@@ -21,6 +21,18 @@ export const PostsWrapper = styled('div', {
   ai: 'center',
   fd: 'column',
   gap: '30px',
+
+  variants: {
+    isMobile: {
+      true: {
+        w: '100%',
+      },
+      false: {
+        w: '80%',
+      },
+    },
+    qw: {},
+  },
 });
 
 export const Post = styled('div', {

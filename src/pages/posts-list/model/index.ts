@@ -5,7 +5,7 @@ import { PostsApi } from '@/shared/api/posts';
 import { Post } from '@/shared/types/post';
 
 export const modelLoaded = createEvent();
-export const postClicked = createEvent<{ postId: string }>();
+export const postClicked = createEvent<Post>();
 
 export const $postsList = createStore<Post[]>([]);
 
